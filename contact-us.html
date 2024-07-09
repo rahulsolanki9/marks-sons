@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+    <main>
+
+        <header class="header">
+            <div class="container">
+                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt=""></a></div>
+            </div>
+        </header>
+        <section class="page-title">
+            <div class="container">
+                <h2>Contact <span>Us</span></h2>
+            </div>
+        </section>
+        <section class="contact s-py">
+            <div class="container">
+                <div class="contact-row row space-between align-center">
+                    <div class="img-sec row">
+                        <img src="images/contact-img.png" alt="">
+                        <div>
+                            <p>marksandsons.com</p>
+                            <p>8 The Green, STE A, Dover DE 19901</p>
+                            <p>(302) 386-8350</p>
+                        </div>
+                    </div>
+            
+                    <form class="row align-center" id="contactForm" method="POST" action="contact-action.php">
+                        <div>
+                            <input id="first_name" type="text" name="first_name" placeholder="Name" class="text-field" required>
+                            <input type="email" name="email" id="email" placeholder="Email Address" class="text-field" required>
+                            <textarea class="text-field" name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                            <div style="margin-top:15px;margin-bottom:15px" class="g-recaptcha" data-sitekey="6Ld7EbImAAAAAFXvIiQ6-UGqNu9qPNiVLbPm12nz"></div>
+                            <button class="red-btn  small-btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content text-center">
+                    <ul class="f-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="ccpa.html">CCPA Request</a></li>
+                        <li><a href="#">Don’t Sell my Information</a></li>
+                        <li><a href="#">Contractor sign-up</a></li>
+                    </ul>
+                    <p>&#169; 2023-2024 Marks & Sons, All Rights Reserved.</p>
+                </div>
+                <div class="f-logo-content row space-between">
+                    <a class="footer-logo" href="index.html"><img src="images/logo.svg" alt=""></a>
+                    <p>NOTICE ABOUT Marks&Sons ADVERTISING: Roofingmasters.com is a pooled roofing company advertisement. Providers are independent and MarksandSons.com does not warrant or guarantee any work performed. It is the responsibility of the property owner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. The advertising providers listed do not constitute an endorsement by this site.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

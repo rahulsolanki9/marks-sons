@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <title>CCPA Request</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+    <main>
+
+        <header class="header">
+            <div class="container">
+                <div class="logo"><a href="index.html"><img src="images/logo.svg" alt=""></a></div>
+            </div>
+        </header>
+        <section class="page-title">
+            <div class="container">
+            <h2>Submit a <span>CCPA Request</span></h2>
+            <h6 class="blue-text">Please fill out the form below to submit your CCPA Request</h6>
+        </div>
+        </section>
+        <section class="ccpa s-py">
+            <div class="container">
+                <div class="mx-w-1000 mx-auto">
+                    <h4>CCPA Request</h4>
+                    <form action="ccpa-action.php" method="POST" class="form">
+                        <p>Are you making this request on behalf of yourself or someone else?</p>
+                        <select id="request_for" class="text-field" name="request_for" required="required">
+                            <option value="">-- Select One --</option>
+                            <option value="Myself">Myself</option>
+                            <option value="Someone Else">Someone Else</option>
+                        </select>
+                        <p>What type of request would you like to make? (Select at least one)</p>
+                        <label>
+                            <input id="request_access"  type="checkbox" name="request_type[]" value="Please provide access to my personal information" role="checkbox" aria-invalid="false">
+                            <p>Please provide access to my personal information</p>
+                        </label>
+                        <label>
+                            <input id="request_delete"  type="checkbox" name="request_type[]" value="Please delete my personal information" role="checkbox" aria-invalid="false">
+                            <p>Please delete my personal information</p>
+                        </label>
+                        <label>
+                            <input id="request_dontsell"type="checkbox" name="request_type[]" value="Please do not sell my personal information" role="checkbox" aria-invalid="false">
+                            <p>Please do not sell my personal information</p>
+                        </label>
+                        <label>
+                            <input id="request_question"  type="checkbox" name="request_type[]" value="Ask a question related to my personal information and/or the CCPA" role="checkbox" aria-invalid="false">
+                            <p>Ask marksandsons.com a question related to my personal information and/or the CCPA</p>
+                        </label>
+                        <p class="last">Please send the following information to help us process your request (please use the information previously supplied to marksandsons.com in order for us to identify you)</p>
+                        <div class="inputs row align-center" style="margin-bottom:15px">
+                            <input class="text-field" id="first_name" type="text" name="first_name" type="text" required placeholder="First Name">
+                            <input class="text-field" type="text" id="last_name" type="text" name="last_name"  required placeholder="Last Name">
+                            <input class="text-field" id="phone_number" type="tel" name="phone" maxlength="12" class="text-field" required placeholder="Phone Number">
+                            <input id="email" type="email" name="email" class="text-field" required placeholder="Email">
+                            <input id="street_address" type="text" name="address" class="text-field" required" placeholder="Street Address">
+                            <input id="city" type="text" name="city" class="text-field" required placeholder="City">
+                            <input id="state" type="text" name="state" class="text-field" maxlength="2" required placeholder="State">
+                            <input id="zip" type="text" name="zip_code" class="text-field" required placeholder="Zip Code">
+                        </div>
+        
+                        <div class="g-recaptcha" data-sitekey="6Ld7EbImAAAAAFXvIiQ6-UGqNu9qPNiVLbPm12nz"></div>
+                        <button class="red-btn small-btn">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content text-center">
+                    <ul class="f-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="ccpa.html">CCPA Request</a></li>
+                        <li><a href="#">Don’t Sell my Information</a></li>
+                        <li><a href="#">Contractor sign-up</a></li>
+                    </ul>
+                    <p>&#169; 2023-2024 Marks & Sons, All Rights Reserved.</p>
+                </div>
+                <div class="f-logo-content row space-between">
+                    <a class="footer-logo" href="index.html"><img src="images/logo.svg" alt=""></a>
+                    <p>NOTICE ABOUT Marks&Sons ADVERTISING: Roofingmasters.com is a pooled roofing company advertisement. Providers are independent and MarksandSons.com does not warrant or guarantee any work performed. It is the responsibility of the property owner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. The advertising providers listed do not constitute an endorsement by this site.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

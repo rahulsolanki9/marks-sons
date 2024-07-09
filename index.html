@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <title>Marks&sons</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="home-page">
+
+    <main>
+
+        <header class="header">
+            <div class="container">
+                <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
+            </div>
+        </header>
+
+        <section class="site-banner" style="background-image: url(images/banner-img.png);">
+            <div class="row container align-end">
+                <div class="banner-img"> <img src="images/father-and-son.png" alt=""></div>
+                <div class="banner-content">
+                    <div class="inner">
+                        <h3 class="slider-ttl ">Affordable Roofing Experts at Bayonne, NY</h3>
+                        <div class="step-wrapper">
+                            <form action="/api/lead/index.php" method="POST" id="ssForm">
+                                <input name="universal_leadid" id="leadid_token" type="hidden" value=""
+                                    autocomplete="off" />
+                                <input name="path" type="hidden" value="roofing">
+                                <input name="category_id" type="hidden" value="1" />
+                                <input name="sid" type="hidden" value="1" />
+                                <input name="city" id="city" type="hidden" value="" />
+                                <input name="state" id="state" type="hidden" value="" />
+
+                                <div class="step-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" data-title="Slide1">
+                                            <div class="title">
+                                                <h4>Free Expert Estimate</h4>
+                                                <h6>Let's make sure we can service your area</h6>
+                                            </div>
+                                            <ul class="form-list">
+                                                <li class="full">
+                                                    <input class="text-field zip" type="text" inputmode="numeric" id="zip"
+                                                        name="zip" autocomplete="postal-code"
+                                                        onkeypress="return isNumberKey(event)" pattern="[0-9]*"
+                                                        maxlength="5" size="5" value="">
+                                                    <label class="floating-label" autocomplete="zip">Enter Zip code</label>
+                                                </li>
+                                            </ul>
+                                            <div class="swiper-action">
+                                                <a class="red-btn w-100 swiper-next" href="javascript:;"
+                                                    id="calculateYourSavings">Get Estimate</a>
+                                            </div>
+                                            <div class="location-area row align-center"> <img src="images/location-icon.svg"
+                                                    alt="">Florida And Surrounding Areas</div>
+                                        </div>
+
+                                        <div class="swiper-slide" data-title="Slide7">
+                                            <div class="title">
+                                                <h4>Your Name</h4>
+                                                <h6>We'll Customize Your Free Estimate</h6>
+                                            </div>
+                                            <ul class="form-list">
+                                                <li class="full">
+                                                    <input class="text-field" type="text" id="fname" name="first_name"
+                                                        autocomplete="on">
+                                                    <label class="floating-label">First Name</label>
+                                                </li>
+                                                <li class="full">
+                                                    <input class="text-field" type="text" id="lname" name="last_name"
+                                                        autocomplete="on">
+                                                    <label class="floating-label">Last Name</label>
+                                                </li>
+                                            </ul>
+                                            <div class="swiper-action">
+                                                <a class="red-btn w-100 swiper-next nextSlide"
+                                                    href="javascript:;">Continue</a>
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <div class="swiper-slide" data-title="Slide7">
+                                            <div class="title">
+                                                <h4>Property Address</h4>
+                                                <h6>Example: 123 Main Street.</h6>
+                                            </div>
+                                            <ul class="form-list">
+
+                                                <li class="full">
+                                                    <input class="text-field" type="text" id="address" name="address"
+                                                        autocomplete="address-line1">
+                                                    <label class="floating-label">Address</label>
+                                                </li>
+                                                <li class="full" style="margin:0">
+                                                    <div class="address-info" id="location-text"
+                                                        style="float:right;font-size:14px">
+                                                        <p></p>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                            <div class="swiper-action">
+                                                <a class="red-btn w-100 swiper-next nextSlide"
+                                                    href="javascript:;">Continue</a>
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <div class="swiper-slide" data-title="Slide2">
+                                            <div class="title">
+                                                <h4 id='rh4'>Roofing Request</h4>
+                                                <h6>Specify below what services you need</h6>
+                                            </div>
+                                            <div class="row custom-options" id="tasks">
+
+                                                <div class="custom-radio radio-next">
+                                                    <input type="radio" id="task_331" name="task_id" value="331">
+                                                    <label for="task_331">Roof Repair - Asphalt Shingle</label>
+                                                </div>
+                                                <div class="custom-radio radio-next">
+                                                    <input type="radio" id="task_334" name="task_id" value="334">
+                                                    <label for="task_334">Roof Repair - Tile</label>
+                                                </div>
+                                                <div class="custom-radio radio-next">
+                                                    <input type="radio" id="task_332" name="task_id" value="332">
+                                                    <label for="task_332">Roof Repair - Metal</label>
+                                                </div>
+                                                <div class="custom-radio radio-next">
+                                                    <input type="radio" id="task_324" name="task_id" value="324">
+                                                    <label for="task_324">Roof Install - Asphalt Shingle</label>
+                                                </div>
+                                                <div class="custom-radio">
+                                                    <select class="dropdown" name='task_ids' id="task_id_dd">
+                                                        <option value='0'>More Options</option>
+                                                        <option value='333'>Roof Repair - Natural Slate</option>
+                                                        <option value='335'>Roof Repair - Wood Shake/Comp.</option>
+                                                        <option value='336'>Roof Repair-Flat / SinglePly</option>
+                                                        <option value='337'>Roof Replace - Asphalt Shingle</option>
+                                                        <option value='340'>Roof Replace - Natural Slate</option>
+                                                        <option value='342'>Roof Replace - Wood Shake</option>
+                                                        <option value='339'>Roof Replace - Metal</option>
+                                                        <option value='341'>Roof Replace - Tile</option>
+                                                        <option value='338'>Roof Replace - Flat/SinglePly</option>
+                                                        <option value='330'>Roof Maintenance/Cleaning</option>
+                                                        <option value='343'>Skylight Install</option>
+                                                        <option value='327'>Roof Install - Natural Slate</option>
+                                                        <option value='329'>Roof Install-Wood Shake/Comp.</option>
+                                                        <option value='326'>Roof Install - Metal</option>
+                                                        <option value='328'>Roof Install - Tile</option>
+                                                        <option value='325'>Roof Install - Flat/Single Ply</option>
+                                                        <option value='323'>Garage Or Asphalt Shed Roof Replacement</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="swiper-slide" data-title="Slide6">
+
+
+                                            <div class="title">
+                                                <h4>Phone Number</h4>
+                                                <h6>Congratulations, we service your area</h6>
+                                            </div>
+                                            <ul class="form-list">
+                                                <li class="full">
+                                                    <input class="text-field" type="text" id="phone" name="phone_number"
+                                                        inputmode="numeric" autocomplete="on" maxlength="10"
+                                                        onkeypress="return isNumberKey(event)" pattern="[0-9]*">
+                                                    <label class="floating-label">Phone</label>
+                                                </li>
+                                            </ul>
+
+
+                                            <div class="swiper-action">
+                                                <a class="red-btn w-100 swiper-next nextSlide"
+                                                    href="javascript:;">Continue</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide" data-title="Slide8">
+                                            <div class="title">
+                                                <h4>Email</h4>
+                                                <h6>Get Your Expert Estimate</h6>
+                                            </div>
+                                            <ul class="form-list">
+                                                <li class="full">
+                                                    <input class="text-field" type="email" id="email" name="email"
+                                                        autocomplete="email">
+                                                    <label class="floating-label">Email Address</label>
+                                                </li>
+                                            </ul>
+
+                                            <div class="swiper-action">
+                                                <a class="red-btn w-100 submitButton" href="javascript:;">Get Estimate</a>
+                                            </div>
+                                            <div class="note mt-50" style="margin-top:0px">
+			    								<input type="hidden" name="tcpa" id="leadid_tcpa_disclosure"/>
+											    <label for="leadid_tcpa_disclosure"  class="font-12" style="margin:20px 0;display:block;font-size:11px;line-height:1.2;text-align:justify;" id="tcpa_label">By submitting this form, you are giving your consent to receive phone calls and text messages from Networx Systems, Inc., its <a href="/installers.html" target="_blank" style="text-decoration:underline">partners</a>, and other service professionals at the phone number you input (including wireless number if provided). Contacting you is for the purpose of confirming and scheduling your home improvement project request and multiple contractor bids. You understand that automated phone technology, by voice or text messages, may be used to reach you. Please note that providing consent does not obligate you to purchase or use any product or service.  By using this service, I also agree to be bound by the <a href="/terms.html" target="_blank" style="text-decoration:underline">Terms of Service</a> and <a href="/privacy.html" target="_blank" style="text-decoration:underline">Privacy Policy</a>.</label>
+										</div>
+                                            </div>
+                                        <div class="swiper-slide" data-title="Slide9">
+                                            <div class="title">
+                                                <h4 class="processing-text">Processing Your Request</h4>
+                                                <h6>Please Wait One Moment</h6>
+                                            </div>
+
+                                            <div class="mxw-500 mx-auto" style="margin:0 auto;text-align:center">
+                                                <div id="processor">
+                                                    <div class="sphere" id="sphere1"></div>
+                                                    <div class="sphere" id="sphere2"></div>
+                                                    <div class="sphere" id="sphere3"></div>
+                                                    <div class="sphere" id="sphere4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bullets-box-container">
+                <div class="bullets-box row space-between container s-py-34">
+                    <div class="col-6">
+                        <h6>You’re one step away from connecting with a specialist who can complete your request. Please
+                            tell us about your project so we can better assist you.</h6>
+                    </div>
+                    <div class="col-6 bullets-content">
+                        <ul class="roof-list">
+                            <li class="red-bullet">Major Roof Repair</li>
+                            <li class="red-bullet">Minor Roof Repair</li>
+                            <li class="red-bullet">Metal Roofing</li>
+                            <li class="red-bullet">Shingle Roofing</li>
+                            <li class="red-bullet">Flat Roofing</li>
+                            <li class="red-bullet">Roof Replacement</li>
+                            <li class="red-bullet">Leak Detection</li>
+                            <li class="red-bullet">Leak Repairs</li>
+                            <li class="red-bullet">Emergency Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="customer-requests s-py">
+            <div class="container row space-between">
+                <div class="map-img">
+                    <img class="map" src="images/map.png" alt=""></div>
+                <div class="before-after-content">
+                    <h4>Recent Customer Requests</h4>
+                    <h6 class="sub-ttl">We've helped customers to compare price quotes in major metros across the <a
+                            href="#">Bayonne </a> area</h6>
+                    <div class="row space-between before-after-block">
+                        <div class="before-after ">
+                            <img src="images/before.jpg" alt="">
+                            <h6>BEFORE</h6>
+                        </div>
+                        <div class="before-after ">
+                            <img src="images/after.jpg" alt="">
+                            <h6>AFTER</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" services-sec">
+            <div class="container row space-between services-slider-section">
+                <div class="services-left col-6">
+                    <h4 class="services-ttl"> <span class="blue-text">Boost </span> Your Property's <span class="red-text">Value </span> With
+                        Our <span class="red-text">Residential </span> & Commercial Services</h4>
+                    <p>With a focus on quality, customer satisfaction, and trustworthy partnerships, Roofing Masters takes the guesswork out of finding the right contractor for your roofing needs. <br>
+                        Choosing Marks & Sons means connecting with the best local roofing professionals. Unlike other platforms, Roofing Masters connects you to a network of top-rated contractors who are not only certified, insured and licensed, but also have a proven track record of excellence backed by glowing reviews. </p>
+                    <a href="#" class="red-btn  small-btn">Get A Quote</a>
+                </div>
+                <div class="services-right col-6">
+                    <div class="swiper-container">
+                        <!-- swiper slides -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/shingle-roofing.png" alt="">
+                                <h5>Shingle Roofing</h5>
+                                <p>Roof shingles are a roof covering consisting of individual overlapping elements. These elements are typically flat, rectangular shapes laid in courses from the bottom edge of the roof up, with each successive course overlapping the joints below.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/shingle-roofing.png" alt="">
+                                <h5>Shingle Roofing</h5>
+                                <p>Roof shingles are a roof covering consisting of individual overlapping elements. These elements are typically flat, rectangular shapes laid in courses from the bottom edge of the roof up, with each successive course overlapping the joints below.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/shingle-roofing.png" alt="">
+                                <h5>Shingle Roofing</h5>
+                                <p>Roof shingles are a roof covering consisting of individual overlapping elements. These elements are typically flat, rectangular shapes laid in courses from the bottom edge of the roof up, with each successive course overlapping the joints below.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="slider-dots">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-sec s-py-50" style="background-image: url(images/why-choose-banner.png);">
+            <div class="container why-container">
+                <div class="title">
+                    <h2>Why Choose us</h2>
+                    <h6>Various versions have evolved over the years, sometimes by accident,</h6>
+                </div>
+                <div class="why-content-blocks row">
+                    <div class="wc-block row">
+                        <div class="wc-img row align-center">
+                            <img src="images/why-img1.svg" alt="">
+                        </div>
+                        <h5>Quality & Experience</h5>
+                        <p>We have established ourself as a trusted provider of high-quality roofing solutions with an emphasis on customer satisfaction.</p>
+                    </div>
+                    <div class="wc-block row ">
+                        <div class="wc-img row align-center">
+                            <img src="images/why-img2.svg" alt="">
+                        </div>
+                        <h5>Fast & <br> Efficient Service</h5>
+                        <p>Our team is committed to completing your project on time, without compromising on quality.</p>
+                    </div>
+                    <div class="wc-block row">
+                        <div class="wc-img row align-center">
+                            <img src="images/why-img3.svg" alt="">
+                        </div>
+                        <h5>Free <br> Consultation</h5>
+                        <p>We offer free consultations to understand your needs and provide tailored solutions.</p>
+                    </div>
+                    <div class="wc-block row">
+                        <div class="wc-img row align-center">
+                            <img src="images/why-img4.svg" alt="">
+                        </div>
+                        <h5>Local <br> Knowledge</h5>
+                        <p>Our local contractors understand the unique challenges and requirements specific to your area.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="types-roofing-sec s-py row">
+            <div class="container row space-between">
+                <div class="types-roofing-block col-6">
+                    <div class="roofing-type row space-between">
+                        <h2>Residential Roofing</h2>
+                        <img src="images/roofing-home-1.svg" alt="">
+                    </div>
+                    <p>Marks & Sons offers comprehensive residential roofing services, delivering superior craftsmanship and using high-quality materials to ensure the longevity and aesthetic appeal of your home's roof.</p>
+                    <a href="#" class="red-btn  small-btn btn-bg-white">Get A Quote</a>
+                </div>
+                <div class="types-roofing-block col-6">
+                    <div class="roofing-type row space-between">
+                        <h2>Commercial Roofing</h2>
+                        <img src="images/roofing-home-2.svg" alt="">
+                    </div>
+                    <p>Marks & Sons offers a full range of commercial roofing services, including project assessments, estimates, installations, and repairs, with a team of specialists available 24/7 for all your roofing needs.</p>
+                    <a href="#" class="red-btn  small-btn btn-bg-white">Get A Quote</a>
+                </div>
+            </div>
+        </section>
+        <section class="about-sec s-py-50">
+            <div class="container row space-between">
+                <div class="about-img w-50"><img src="images/about-main.png" alt=""></div>
+                <div class="about-content w-50">
+                    <h2>About Us</h2>
+                    <p>When it comes to your home, various aspects require professional attention to ensure its proper functioning and overall appeal. At Marks & Sons, we understand this significance and take pride in connecting you with a wide range of home services provided by local contractors in our network.</p>
+                    <p>We believe in personalized solutions to deliver exceptional service. Local providers assess your needs and offer customized quotes tailored to meet your specific requirements. Our network recognizes that every home is unique, working closely with you to ensure services align with your vision and goals.</p>
+                    <p>For your roofing needs, whether it's a new construction build or repairs for a damaged roof, trust our professional network. Submit one form detailing your project, and receive a quick estimate based on your specific project details.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content text-center">
+                    <ul class="f-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="ccpa.html">CCPA Request</a></li>
+                        <li><a href="#">Don’t Sell my Information</a></li>
+                        <li><a href="#">Contractor sign-up</a></li>
+                    </ul>
+                    <p>&#169; 2023-2024 Marks & Sons, All Rights Reserved.</p>
+                </div>
+                <div class="f-logo-content row space-between">
+                    <a class="footer-logo" href="index.html"><img src="images/logo.svg" alt=""></a>
+                    <p>NOTICE ABOUT Marks&Sons ADVERTISING: Roofingmasters.com is a pooled roofing company advertisement. Providers are independent and MarksandSons.com does not warrant or guarantee any work performed. It is the responsibility of the property owner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. The advertising providers listed do not constitute an endorsement by this site.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+
+    <!-- js all here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
